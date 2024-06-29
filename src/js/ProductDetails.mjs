@@ -37,7 +37,8 @@ function productDetailsTemplate(product) {
     }
     addProductToCart() {
         let cartItems = getLocalStorage("so-cart") || [];
-        cartItems.push(this.product);
+        const itemWithUniqueId = { ...this.product, uniqueId: Date.now().toString() };
+        cartItems.push(itemWithUniqueId);
         setLocalStorage("so-cart", cartItems);
     }
     renderProductDetails(selector) {

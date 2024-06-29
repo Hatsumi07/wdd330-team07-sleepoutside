@@ -220,3 +220,32 @@ footer {
   font-size: var(--small-font);
   padding: 1em;
 }
+
+/* CART HIDE TOTAL */
+.hide {
+  display: none;
+}
+
+.cart-footer {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+/* CSS para el botón de eliminar */
+.remove-item {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+}
+
+.cart-card {
+  position: relative;
+  padding-right: 40px; /* Espacio para el botón de eliminar */
+}
