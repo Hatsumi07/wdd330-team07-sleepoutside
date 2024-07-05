@@ -28,3 +28,11 @@ export function getParam(param){
   const product = urlParams.get(param)
   return product
 }
+
+export function addEventListener(element, callback) {
+  const elements = document.querySelectorAll(element);
+  elements.forEach((element) => {
+    element.addEventListener("click", callback)
+  });
+
+}
