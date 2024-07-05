@@ -1,20 +1,12 @@
-import { addEventListener, getLocalStorage, setClick, setLocalStorage } from "./utils.mjs";
+import { setClickAll, getLocalStorage, setLocalStorage } from "./utils.mjs";
 
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart");
   if (Array.isArray(cartItems)) {
     const htmlItems = cartItems.map((item) => cartItemTemplate(item));
-    const productList = document.querySelector(".product-list");
-    productList.innerHTML = htmlItems.join("");
+    document.querySelector(".product-list").innerHTML = htmlItems.join("");
 
-    const childNodes = productList.childNodes;
-
-    childNodes.forEach((child) => {
-      setClick("#removeFromCart", removeCartItem);
-    })
-    //adds eventListeners to the elements that match the first argument
-    // addEventListener("#removeFromCart", removeCartItem);
-
+    setClickAll("#removeFromCart", removeCartItem);
   } else {
     document.querySelector(".product-list").innerHTML = "Empty Car.";
   }
