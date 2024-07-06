@@ -253,5 +253,6 @@ footer {
 
 .cart-card {
   position: relative;
-  padding-right: 40px; /* Espacio para el botón de eliminar */
+  padding-right: 40px;
+}
 }
