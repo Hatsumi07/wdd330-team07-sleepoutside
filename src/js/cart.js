@@ -1,4 +1,3 @@
-import { getLocalStorage, setLocalStorage } from "./utils.mjs";
 import { setClickAll, getLocalStorage, setLocalStorage } from "./utils.mjs";
 
 function renderCartContents() {
