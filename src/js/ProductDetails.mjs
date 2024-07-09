@@ -9,6 +9,7 @@ function productDetailsTemplate(product) {
         alt="${product.NameWithoutBrand}"
       />
       <p class="product-card__price">$${product.FinalPrice}</p>
+      <p class="product__discount ${product.FinalPrice < product.SuggestedRetailPrice ? "" : "hide"}">${getDiscount(product.SuggestedRetailPrice, product.FinalPrice)}% Dsct.</p>
       <p class="product__color">${product.Colors[0].ColorName}</p>
       <p class="product__description">
       ${product.DescriptionHtmlSimple}
@@ -16,6 +17,11 @@ function productDetailsTemplate(product) {
       <div class="product-detail__add">
         <button id="addToCart" data-id="${product.Id}">Add to Cart</button>
       </div></section>`;
+  }
+
+  function getDiscount(originalPrice, finalPrice) {
+    const discount = (originalPrice - finalPrice) / (originalPrice / 100);
+    return Math.round(discount);
   }
   
   export default class ProductDetails {
