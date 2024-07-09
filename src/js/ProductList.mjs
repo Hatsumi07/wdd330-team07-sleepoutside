@@ -3,6 +3,9 @@ import { renderListWithTemplate } from "./utils.mjs";
 function productCardTemplate(product) {
   return `<li class="product-card">
   <a href="product_pages/index.html?product=${product.Id}">
+  <span id=${product.FinalPrice < product.SuggestedRetailPrice ? "dsctTag" : "hide"}>
+    ${product.FinalPrice < product.SuggestedRetailPrice ? "Dsct" : ""}
+  </span>
   <img
     src="${product.Image}"
     alt="Image of ${product.Name}"
