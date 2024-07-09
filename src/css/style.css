@@ -166,6 +166,14 @@ button {
   width: 100%;
 }
 
+.product__discount {
+  background-color: rgb(206, 38, 38);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: inline;
+}
+
 /* Start cart list card styles */
 .cart-card {
   display: grid;
