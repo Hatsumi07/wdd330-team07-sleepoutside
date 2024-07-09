@@ -216,6 +216,15 @@ button {
   cursor: pointer;
 }
 
+#dsctTag {
+  background-color: #c6cbce;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  right: 0.5em;
+  bottom: calc(0.5em - 10px);
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
