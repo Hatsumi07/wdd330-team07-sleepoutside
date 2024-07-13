@@ -216,6 +216,10 @@ button {
   cursor: pointer;
 }
 
+.remove-item {
+  cursor: pointer;
+}
+
 #dsctTag {
   background-color: #c6cbce;
   padding: 10px;
